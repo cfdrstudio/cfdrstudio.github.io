@@ -82,6 +82,10 @@ a{ color:inherit; }
 .row__foot a:hover{ color:var(--accent-hover); border-color:var(--accent-hover); }
 .pill{ display:inline-block; padding:.1rem .5rem; border:1px solid var(--rule); border-radius:2px; color:var(--ink-mute); font-family:var(--font-mono); }
 .pill--live{ color:var(--accent); border-color:var(--accent-15); background:var(--accent-15); }
+/* The status pill as a link (the App Store listing): it keeps the pill's look, not the row's underlined links */
+.row__foot a.pill{ border:1px solid var(--rule); text-decoration:none; transition:color .18s ease, border-color .18s ease; }
+.row__foot a.pill--live{ color:var(--accent); border-color:var(--accent-15); }
+.row__foot a.pill--live:hover{ color:var(--accent-hover); border-color:var(--accent-hover); }
 /* Buy Me a Coffee: a plain link styled like their button (their script is blocked by the CSP) */
 .bmc-button{ display:inline-flex; align-items:center; gap:.4rem; margin-top:.9rem; padding:.3rem 1rem .3rem .8rem;
   background:#FFDD00; color:#000; border:1px solid #000; border-radius:10px; text-decoration:none;
@@ -133,8 +137,21 @@ a{ color:inherit; }
         and substitutions courtside and get a clean box score and shot chart when the final buzzer
         sounds. Built for coaches and stat-keepers who want something faster than a paper sheet.</p>
         <div class="row__foot">
-          <span class="pill pill--live">Available on the App Store</span>
-          <a href="https://apps.apple.com/app/apple-store/id6759014413?pt=128529583&amp;ct=website-apps&amp;mt=8">App Store ↗</a>
+          <a href="https://apps.apple.com/app/apple-store/id6759014413?pt=128529583&amp;ct=website-apps&amp;mt=8" class="pill pill--live">Available on the App Store</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="row">
+      <div class="row__mark">iOS<small>Swift</small></div>
+      <div>
+        <h3 class="row__title">Even Time</h3>
+        <p class="row__body">An iPhone app that keeps each player's time on the field during a game, shows
+        who has had less or more than an equal share as it goes, and adds it up across the season. For
+        coaches of junior and community teams in any team sport, with nothing uploaded and no account.</p>
+        <div class="row__foot">
+          <!-- LAUNCH: make the pill a link to the App Store listing and say "Available on the App Store", as Court Tracker's does; no separate App Store link -->
+          <span class="pill">Coming soon to the App Store</span>
         </div>
       </div>
     </article>
